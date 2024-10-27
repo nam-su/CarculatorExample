@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 부호 버튼 -->
+    <style name="buttonSign">
+
+        <item name="android:background">@drawable/sign_button </item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:maxWidth">320dp</item>
+
+        <item name="android:textSize">30sp</item>
+        <item name="android:stateListAnimator">@null</item>
+
+    </style>
+
+    <!-- 숫자 버튼 -->
+    <style name="buttonNumber">
+
+        <item name="android:background">@drawable/number_button </item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:stateListAnimator">@null</item>
+
+    </style>
+
+    <!-- ac 버튼 -->
+    <style name="buttonAC">
+
+        <item name="android:background">@drawable/number_button </item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="background">@drawable/ac_button</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textSize">24sp</item>
+
+    </style>
+
+    <!-- 낮/밤 버튼 -->
+    <style name="buttonMode">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@drawable/mode_button</item>
+        <item name="android:src">@drawable/mode_image</item>
+        <item name="android:stateListAnimator">@null</item>
+
+    </style>
+
+    <!-- 하단 배경 View -->
+    <style name="viewBottomBackground">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:background">@drawable/top_radius</item>
+
+    </style>
+
+    <style name="textViewProcedure">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textAlignment">textEnd</item>
+        <item name="android:layout_marginHorizontal">55dp</item>
+
+    </style>
+
+    <!-- 계산 결과 텍스트 뷰 -->
+    <style name="textViewResult">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">48sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">textEnd</item>
+        <item name="android:layout_marginHorizontal">55dp</item>
+
+    </style>
+
+    <!-- 길쭉이 버튼 -->
+    <style name="buttonLong">
+
+        <item name="android:background">@drawable/long_button</item>
+        <item name="android:textColor">@color/onlyWhite</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_marginHorizontal">5dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:elevation">5dp</item>
+
+    </style>
+
+</resources>

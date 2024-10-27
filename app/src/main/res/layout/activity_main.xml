@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <!-- 상단 레이아웃 배경-->
+    <View
+        android:id="@+id/viewTopBackground"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/viewBottomBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="0.35" />
+
+    <!-- 계산 과정 TextView -->
+    <TextView
+        android:id="@+id/textViewProcedure"
+        style="@style/textViewProcedure"
+        android:text="@string/procedure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/viewBottomBackground" />
+
+    <!-- 결과 값 TextView-->
+    <TextView
+        android:id="@+id/textViewResult"
+        style="@style/textViewResult"
+        android:layout_height="wrap_content"
+        android:text="@string/result"
+        app:layout_constraintStart_toStartOf="@+id/textViewProcedure"
+        app:layout_constraintEnd_toEndOf="@+id/textViewProcedure"
+        app:layout_constraintTop_toBottomOf="@id/textViewProcedure" />
+
+    <!-- 하단 레이아웃 배경 -->
+    <View
+        android:id="@+id/viewBottomBackground"
+        style="@style/viewBottomBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewTopBackground"
+        app:layout_constraintVertical_weight="0.65" />
+
+    <!-- 버튼 담는 레이아웃 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:padding="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/viewBottomBackground"
+        app:layout_constraintEnd_toEndOf="@id/viewBottomBackground"
+        app:layout_constraintStart_toStartOf="@id/viewBottomBackground"
+        app:layout_constraintTop_toTopOf="@id/viewBottomBackground">
+
+
+        <!-- 1열 버튼 -->
+
+        <!-- 모드 버튼 -->
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/buttonMode"
+            style="@style/buttonMode"
+            android:contentDescription="@string/modeButtonContentDescription"
+            app:layout_constraintBottom_toTopOf="@+id/buttonSeven"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@id/buttonPercent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.19" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonPercent"
+            style="@style/buttonSign"
+            android:text="@string/percent"
+            app:layout_constraintBottom_toBottomOf="@id/buttonMode"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@id/buttonDivide"
+            app:layout_constraintStart_toEndOf="@id/buttonMode"
+            app:layout_constraintTop_toTopOf="@id/buttonMode"
+            app:layout_constraintWidth_percent="0.19" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonDivide"
+            style="@style/buttonSign"
+            android:text="@string/divide"
+            app:layout_constraintBottom_toBottomOf="@id/buttonMode"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@id/buttonMultiply"
+            app:layout_constraintStart_toEndOf="@id/buttonPercent"
+            app:layout_constraintTop_toTopOf="@id/buttonMode"
+            app:layout_constraintWidth_percent="0.19" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonMultiply"
+            style="@style/buttonSign"
+            android:text="@string/multiply"
+            app:layout_constraintBottom_toBottomOf="@id/buttonMode"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonDivide"
+            app:layout_constraintTop_toTopOf="@id/buttonMode"
+            app:layout_constraintWidth_percent="0.19" />
+
+
+        <!-- 2열 버튼 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonSeven"
+            style="@style/buttonNumber"
+            android:text="@string/seven"
+            app:layout_constraintBottom_toTopOf="@+id/buttonFour"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/buttonEight"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonMode"
+            app:layout_constraintWidth_percent="0.19" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonEight"
+            style="@style/buttonNumber"
+            android:text="@string/eight"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonSeven"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@id/buttonNine"
+            app:layout_constraintStart_toEndOf="@+id/buttonSeven"
+            app:layout_constraintTop_toTopOf="@id/buttonSeven"
+            app:layout_constraintWidth_percent="0.19" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonNine"
+            style="@style/buttonNumber"
+            android:text="@string/nine"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonSeven"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@id/buttonMinus"
+            app:layout_constraintStart_toEndOf="@id/buttonEight"
+            app:layout_constraintTop_toTopOf="@id/buttonSeven"
+            app:layout_constraintWidth_percent="0.19" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonMinus"
+            style="@style/buttonSign"
+            android:text="@string/minus"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonSeven"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonNine"
+            app:layout_constraintTop_toTopOf="@id/buttonSeven"
+            app:layout_constraintWidth_percent="0.19" />
+
+
+        <!-- 3열 버튼 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonFour"
+            style="@style/buttonNumber"
+            android:text="@string/four"
+            app:layout_constraintBottom_toTopOf="@+id/buttonOne"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/buttonFive"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonSeven"
+            app:layout_constraintWidth_percent="0.19" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonFive"
+            style="@style/buttonNumber"
+            android:text="@string/five"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonFour"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/buttonSix"
+            app:layout_constraintStart_toEndOf="@id/buttonFour"
+            app:layout_constraintTop_toTopOf="@id/buttonFour"
+            app:layout_constraintWidth_percent="0.19" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonSix"
+            style="@style/buttonNumber"
+            android:text="@string/six"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonFour"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@id/buttonPlus"
+            app:layout_constraintStart_toEndOf="@id/buttonFive"
+            app:layout_constraintTop_toTopOf="@id/buttonFour"
+            app:layout_constraintWidth_percent="0.19" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonPlus"
+            style="@style/buttonSign"
+            android:text="@string/plus"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonFour"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonSix"
+            app:layout_constraintTop_toTopOf="@id/buttonFive"
+            app:layout_constraintWidth_percent="0.19" />
+
+
+        <!-- 4열 버튼 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonOne"
+            style="@style/buttonNumber"
+            android:text="@string/one"
+            app:layout_constraintBottom_toTopOf="@+id/buttonAC"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/buttonFour"
+            app:layout_constraintEnd_toEndOf="@+id/buttonFour"
+            app:layout_constraintTop_toBottomOf="@id/buttonFour"
+            app:layout_constraintWidth_percent="0.19" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonTwo"
+            style="@style/buttonNumber"
+            android:text="@string/two"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonOne"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="@+id/buttonFive"
+            app:layout_constraintEnd_toEndOf="@+id/buttonFive"
+            app:layout_constraintTop_toTopOf="@+id/buttonOne"
+            app:layout_constraintWidth_percent="0.19" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonThree"
+            style="@style/buttonNumber"
+            android:text="@string/three"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonOne"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="@+id/buttonSix"
+            app:layout_constraintEnd_toEndOf="@+id/buttonSix"
+            app:layout_constraintTop_toTopOf="@id/buttonOne"
+            app:layout_constraintWidth_percent="0.19" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonLong"
+            style="@style/buttonLong"
+            android:text="@string/equal"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonDot"
+            app:layout_constraintEnd_toEndOf="@+id/buttonPlus"
+            app:layout_constraintStart_toStartOf="@+id/buttonPlus"
+            app:layout_constraintTop_toTopOf="@+id/buttonThree"
+            app:layout_constraintWidth_percent="0.19" />
+
+
+        <!-- 5열 버튼 -->
+        <com.example.carculatorexample.GradientTextButton
+            android:id="@+id/buttonAC"
+            style="@style/buttonAC"
+            android:text="@string/AC"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="@+id/buttonOne"
+            app:layout_constraintEnd_toEndOf="@+id/buttonOne"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonOne"
+            app:layout_constraintWidth_percent="0.19" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonZero"
+            style="@style/buttonNumber"
+            android:text="@string/zero"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="@+id/buttonTwo"
+            app:layout_constraintEnd_toEndOf="@+id/buttonTwo"
+            app:layout_constraintTop_toTopOf="@+id/buttonAC"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonAC"
+            app:layout_constraintWidth_percent="0.19" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonDot"
+            style="@style/buttonNumber"
+            android:text="@string/dot"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="@id/buttonThree"
+            app:layout_constraintEnd_toEndOf="@+id/buttonThree"
+            app:layout_constraintTop_toTopOf="@+id/buttonAC"
+            app:layout_constraintBottom_toBottomOf="@id/buttonAC"
+            app:layout_constraintWidth_percent="0.19" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- 버튼 담는 레이아웃 끝 -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

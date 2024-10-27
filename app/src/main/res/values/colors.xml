@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- 다크모드 일때도 흰색 -->
+    <color name="onlyWhite">#FFFFFFFF</color>
+
+    <color name="grey">#637381</color>
+
+    <!-- 숫자 버튼 색상 -->
+    <color name="lightGrey">#F5F5F5</color>
+
+    <!-- 부호 버튼 색상 -->
+    <color name="signGrey">#e9ecef</color>
+
+    <!-- 그라데이션 색상 -->
+    <color name="startGradient">#ED0E98</color>
+    <color name="endGradient">#FE5A2D</color>
+
+</resources>

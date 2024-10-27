@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FFFFFFFF</color>
+    <color name="white">#FF000000</color>
+
+    <!-- 숫자 버튼 색상 -->
+    <color name="lightGrey">#27292E</color>
+
+    <!-- 부호 버튼 색상 -->
+    <color name="signGrey">#333333</color>
+
+</resources>
